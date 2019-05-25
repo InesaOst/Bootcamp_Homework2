@@ -1,61 +1,47 @@
-<style>
-  .item1 {
-    background: LightSkyBlue;
-    grid-area: header;
-  }
-  
-  .item2 {
-    background: LightSalmon;
-    grid-area: advert;
-  }
-  
-  .item3 {
-    background: PaleTurquoise;
-    grid-area: content;
-  }
-  
-  .item4 {
-    background: lightpink;
-    grid-area: footer;
-  }
-  
-  .container {
-    font-size: 1.5em;
-    min-height: 300px;
-    width: 100%;
-    background: LightGray;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 50px auto 1fr auto;
-    grid-gap: 10px;
-    grid-template-areas:
-      "header"
-      "advert"
-      "content"
-      "footer";
-  }
-  
-  @media (min-width: 300px){
-    .container{
-      grid-template-columns: auto 1fr;
-      grid-template-rows: auto 1fr auto;
-      grid-template-areas:
-        "advert header"
-        "advert content"
-        "advert footer";
+* {
+    box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+/* Header/logo Title */
+.item1 {
+    padding: 60px;
+    text-align: center;
+    background: #1abc9c;
+    color: black;
+}
+/* Main column */
+.item2 {
+    flex: 70%;
+    background-color: rgb(228, 169, 91);
+    padding: 20px;
+}
+.item3 {
+    flex: 70%;
+    background-color: rgb(221, 148, 51);
+    padding: 50px;
+}
+.item4 {
+    flex:10%;
+    background-color: rgb(245, 187, 140);
+    padding: 10%;
+}
+ 
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    .row, .navbar {   
+        flex-direction: column;
     }
-  }
-  
-  @media (min-width: 400px){
-    .container{
-      /* change the code below this line */
-    
-      grid-template-areas:
-        "advert header"
-        "advert content"
-        "advert footer";
-    
-    /* change the code above this line */
-    }
-  }
-</style>
+}
