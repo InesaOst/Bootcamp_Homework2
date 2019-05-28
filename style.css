@@ -5,7 +5,6 @@
 
 .header {
     min-height: 150px;
-    background-color: rgb(243, 202, 126);
 }
 
 .h2 {
@@ -39,7 +38,7 @@
 }
 
 .hero {
-    min-height: 100px;
+    min-height: 150px;
 }
 
 .feature {
@@ -53,13 +52,20 @@
     }
 }
 
-.hero-da {
-    background-color: rgb(204, 82, 12);
+.hero-da, .body-da {
     margin: 2px;
+    background: url('/img/citrus.jpeg') no-repeat;
+    background-size: 100%;
 }
 
 @media(max-width: 992px) {
     .hero-da {
+        display: none
+    }
+}
+
+@media(min-width: 992px) {
+    .body-da {
         display: none
     }
 }
