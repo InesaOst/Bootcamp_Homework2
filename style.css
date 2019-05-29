@@ -54,7 +54,7 @@
 
 .hero-da, .body-da {
     margin: 2px;
-    background: url('/img/citrus.jpeg') no-repeat;
+    background: url('./img/citrus.jpeg') no-repeat;
     background-size: 100%;
 }
 
@@ -96,7 +96,7 @@
 }
 
 .footer {
-    min-height: 40px;
+    min-height: 100px;
     background-color: #f77930;
 }
 
